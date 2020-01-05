@@ -1,0 +1,22 @@
+# ninja log v5
+1	473	1575917328	src/pav/c0b918b@@pav@sta/wavfile_mono.cpp.o	cbe0e6c6e79d4df6
+1	1018	1575917328	src/25a6634@@synth@exe/instruments_instrument_dumb.cpp.o	e0e3d4903a85c7bc
+2	1121	1575917329	src/25a6634@@synth@exe/synth_midi_score.cpp.o	62c03185187017db
+474	1186	1575917329	src/25a6634@@synth@exe/effects_effect.cpp.o	484d7ba3b3908db8
+2	1198	1575917329	src/25a6634@@synth@exe/synth_envelope_adsr.cpp.o	5a60308c4193e274
+1	1270	1575917329	src/pav/c0b918b@@pav@sta/keyvalue.cpp.o	33d796da79d82031
+2	1462	1575917329	src/25a6634@@synth@exe/synth_multinote_instr.cpp.o	5c0b8d1061756e7f
+2	1465	1575917329	src/25a6634@@synth@exe/synth_orchest.cpp.o	dc03f4f666ef1002
+3	1664	1575917329	src/25a6634@@synth@exe/synth_synthesizer.cpp.o	26b10de3a0863fc9
+1018	1759	1575917329	src/25a6634@@synth@exe/effects_tremolo.cpp.o	47fcd1bbef55ec3c
+1	5297	1575917333	src/pav/c0b918b@@pav@sta/docopt_cpp_docopt.cpp.o	8874e4eab031df24
+3	9	1575913462	src/midi2scores/midi2sco	878a84c638f8f5a6
+1	88	1575917680	src/pav/libpav.a	df7b109903da73a0
+3	489	1575917681	src/midi2scores/e3a398d@@midi2skini@exe/src_Options_private.cpp.o	348697f778eb2e0a
+1	747	1575917681	src/25a6634@@synth@exe/instruments_instrument.cpp.o	e625abe1b45d31fd
+3	749	1575917681	src/midi2scores/e3a398d@@midi2skini@exe/src_Options.cpp.o	7435d962562df057
+2	750	1575917681	src/midi2scores/e3a398d@@midi2skini@exe/src_midi2skini.cpp.o	3efc47ae45a7bc51
+2	867	1575917681	src/midi2scores/e3a398d@@midi2skini@exe/src_FileIO.cpp.o	44739062df6fd3ed
+2	963	1575917681	src/25a6634@@synth@exe/effects_vibrato.cpp.o	fc95570b971eaeb3
+3	1018	1575917681	src/midi2scores/e3a398d@@midi2skini@exe/src_MidiFile.cpp.o	5ed11fb53708f29f
+1018	1120	1575917681	src/midi2scores/midi2skini	150f25f55316a46c

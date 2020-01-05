@@ -2,6 +2,7 @@
 
 sources = [
 	'instruments/instrument.cpp',
+	'instruments/seno.cpp',
 	'instruments/instrument_dumb.cpp',
 	'synth/envelope_adsr.cpp',
 	'synth/midi_score.cpp',
