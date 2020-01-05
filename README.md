@@ -112,6 +112,9 @@ const vector<float> & Seno::synthesize() {
   
   <img src="img/sinusAndTable.png" width="640" align="center">
   
+  *Nota: Para generar la gráfica se han escrito las variables x y tbl en fichertos .txt usando el comando*
+  *| tee -a file.txt y luego se ha generado la gráfica con Python* 
+  
   Finalmente, también podemos ver la forma de onda que genera utilizando el wavesurfer. En ella podemos distinguir un
   total de 8 "pulsos" que son sinusoides a diferentes frecuencias que generan, por orden, las notas: do,re,mi,fa,sol
   la, si, do'. 
