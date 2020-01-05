@@ -48,9 +48,76 @@ Implemente el instrumento `Seno` tomando como modelo el `InstrumentDumb`. La se�
 búsqueda de los valores en una tabla.
 
 - Incluya, a continuación, el código del fichero `seno.cpp` con los métodos de la clase Seno.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~.sh
+void Seno::command(long cmd, long note, long vel) {
+  if (cmd == 9) {		//'Key' pressed: attack begins
+    bActive = true;
+    adsr.start();
+    index = 0;
+	  A = vel / 127.;
+    float F0 = (440.00*pow(2,((float)note-69.00)/12.00))/SamplingRate;
+    step = tbl.size()*F0;
+    
+  }
+  else if (cmd == 8) {	//'Key' released: sustain ends, release begins
+    adsr.stop();
+  }
+  else if (cmd == 0) {	//Sound extinguished without waiting for release to end
+    adsr.end();
+  }
+}
+
+
+const vector<float> & Seno::synthesize() {
+  if (not adsr.active()) {
+    x.assign(x.size(), 0);
+    bActive = false;
+    return x;
+  }
+  else if (not bActive)
+    return x;
+
+  for (unsigned int i=0; i<x.size(); ++i) {
+    if (round(index*step) == tbl.size()) {
+      index = 0;
+    }
+    
+    x[i] = A*tbl[round(index*step)];
+    index++;
+  }
+  adsr(x); 
+  return x;
+}
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  
 - Explique qué método se ha seguido para asignar un valor a la señal a partir de los contenidos en la tabla, e incluya
   una gráfica en la que se vean claramente (use pelotitas en lugar de líneas) los valores de la tabla y los de la
   señal generada.
+  
+  Con la información que aporta el enunciado de la práctica (Pg. 11 ), podemos concluir que la frecuencia fundamental
+  que deseamos viene dada por la expresión: 
+  
+  > **f0 = 440*2 ^ (nota - 69)/12**
+  
+  Además, vemos que la frecuencia del seno con el cual se ha generado la tabla, puede modificarse si recorremos 
+  a una velocidad adecuada la tabla. Por ejemplo, si recorremos en saltos de 2 la tabla, doblaremos la frecuencia 
+  fundamental. Es decir que 2*f0 = 2*fm/Longitud_Tabla. De aquí deducimos que el valor del step deberá ser: 
+  
+  > **step = f0*Longitud_Tabla/fm**
+  
+  De esta manera, recorremos la tabla aumentando cada vez un step. Cuando el valor del índice supera la longitud de la
+  tabla, este pasa a valer 0 y volvemos a contar en incrementos de step. En la gráfica siguiente podemos ver cómo 
+  obtenemos la señal muestreada a partir de la señal original guardada en la tabla: 
+  
+  
+  <img src="img/sinusAndTable.png" width="640" align="center">
+  
+  Finalmente, también podemos ver la forma de onda que genera utilizando el wavesurfer. En ella podemos distinguir un
+  total de 8 "pulsos" que son sinusoides a diferentes frecuencias que generan, por orden, las notas: do,re,mi,fa,sol
+  la, si, do'. 
+  
+  <img src="img/sinusws.png" width="640" align="center">
+   
 - Si ha implementado la síntesis por tabla almacenada en fichero externo, incluya a continuación el código del método
   `command()`.
 
