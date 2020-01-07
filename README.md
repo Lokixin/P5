@@ -167,6 +167,14 @@ const vector<float> & Seno::synthesize() {
   Deberá explicar detalladamente cómo se manifiestan los parámetros del efecto (frecuencia e índice de modulación) en
   la señal generada (se valorará que la explicación esté contenida en las propias gráficas, sin necesidad de
   *literatura*).
+  En la siguiente gráfica podemos ver de manera conjunta la señal original y la misma aplicando cada uno de los efectos:
+  
+  <img src="img/norm_trmo_vibra.png" width="640" align="center">
+  
+  En el trémolo, podemos ver más detalladamente cómo afecta el período del coseno que modula la amplitud: 
+  
+   <img src="img/tremolo.png" width="640" align="center">
+  
 - Si ha generado algún efecto por su cuenta, explique en qué consiste, cómo lo ha implementado y qué resultado ha
   producido. Incluya, en el directorio `work/ejemplos`, los ficheros necesarios para apreciar el efecto, e indique,
   a continuación, la orden necesaria para generar los ficheros de audio usando el programa `synth`.
