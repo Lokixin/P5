@@ -5,6 +5,12 @@
 #include "generico.h"
 #include "plano.h"
 #include "vibratoFM.h"
+#include "sinte_campana.h"
+#include "sinte_metal.h"
+#include "sinte_basoon.h"
+#include "sinte_clarinete.h"
+#include "sinte_drums.h"
+#include "sintesisfm.h"
 
 /*
   For each new instrument:
@@ -31,7 +37,25 @@ namespace upc {
       pInst = (Instrument *) new Plano(parameters);
     }else if (name == "VibratoFM"){
       pInst = (Instrument *) new VibratoFM(parameters);
+    } else if (name == "SintesisFM") {
+      pInst = (Instrument *) new SintesisFM(parameters);
     }
+    else if (name == "Sinte_Clarinete") {
+      pInst = (Instrument *) new Sinte_Clarinete(parameters);
+    }
+    else if (name == "Sinte_Campana") {
+      pInst = (Instrument *) new Sinte_Campana(parameters);
+    }
+    else if (name == "Sinte_Drums") {
+      pInst = (Instrument *) new Sinte_Drums(parameters);
+    }
+    else if (name == "Sinte_Metal") {
+      pInst = (Instrument *) new Sinte_Metal(parameters);
+    }
+    else if (name == "Sinte_Basoon") {
+      pInst = (Instrument *) new Sinte_Basoon(parameters);
+    }
+
     
     return pInst;
   }

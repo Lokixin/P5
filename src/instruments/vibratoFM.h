@@ -10,10 +10,10 @@ namespace upc {
   class VibratoFM: public upc::Instrument {
     private:
       EnvelopeADSR adsr;
-      unsigned int index;
+      float index;
   	  float A, fo,vel;
       double fase_mod, inc_fase_mod;
-      float step, N,N1,N2, I, fm, phase1, phase2, alpha1, alpha2, phase, mod_c, phase_m, alpha_m;
+      float step, N,N1,N2, I, fm,mod_c,phase, phase_m, alpha_m;
       std::vector<float> tbl;
     public:
       VibratoFM(const std::string &param = "");

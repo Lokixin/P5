@@ -51,6 +51,36 @@
   },
   {
     "directory": "/home/dimas/Documentos/Uni/3B/PAV/P5/build/release",
+    "command": "c++ -Isrc/25a6634@@synth@exe -Isrc -I../../src -I../../src/include -I../../src/synth -I../../src/instruments -I../../src/pav/docopt_cpp -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wnon-virtual-dtor -std=c++11 -O3 -MD -MQ 'src/25a6634@@synth@exe/instruments_sinte_metal.cpp.o' -MF 'src/25a6634@@synth@exe/instruments_sinte_metal.cpp.o.d' -o 'src/25a6634@@synth@exe/instruments_sinte_metal.cpp.o' -c ../../src/instruments/sinte_metal.cpp",
+    "file": "../../src/instruments/sinte_metal.cpp"
+  },
+  {
+    "directory": "/home/dimas/Documentos/Uni/3B/PAV/P5/build/release",
+    "command": "c++ -Isrc/25a6634@@synth@exe -Isrc -I../../src -I../../src/include -I../../src/synth -I../../src/instruments -I../../src/pav/docopt_cpp -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wnon-virtual-dtor -std=c++11 -O3 -MD -MQ 'src/25a6634@@synth@exe/instruments_sinte_campana.cpp.o' -MF 'src/25a6634@@synth@exe/instruments_sinte_campana.cpp.o.d' -o 'src/25a6634@@synth@exe/instruments_sinte_campana.cpp.o' -c ../../src/instruments/sinte_campana.cpp",
+    "file": "../../src/instruments/sinte_campana.cpp"
+  },
+  {
+    "directory": "/home/dimas/Documentos/Uni/3B/PAV/P5/build/release",
+    "command": "c++ -Isrc/25a6634@@synth@exe -Isrc -I../../src -I../../src/include -I../../src/synth -I../../src/instruments -I../../src/pav/docopt_cpp -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wnon-virtual-dtor -std=c++11 -O3 -MD -MQ 'src/25a6634@@synth@exe/instruments_sinte_basoon.cpp.o' -MF 'src/25a6634@@synth@exe/instruments_sinte_basoon.cpp.o.d' -o 'src/25a6634@@synth@exe/instruments_sinte_basoon.cpp.o' -c ../../src/instruments/sinte_basoon.cpp",
+    "file": "../../src/instruments/sinte_basoon.cpp"
+  },
+  {
+    "directory": "/home/dimas/Documentos/Uni/3B/PAV/P5/build/release",
+    "command": "c++ -Isrc/25a6634@@synth@exe -Isrc -I../../src -I../../src/include -I../../src/synth -I../../src/instruments -I../../src/pav/docopt_cpp -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wnon-virtual-dtor -std=c++11 -O3 -MD -MQ 'src/25a6634@@synth@exe/instruments_sinte_drums.cpp.o' -MF 'src/25a6634@@synth@exe/instruments_sinte_drums.cpp.o.d' -o 'src/25a6634@@synth@exe/instruments_sinte_drums.cpp.o' -c ../../src/instruments/sinte_drums.cpp",
+    "file": "../../src/instruments/sinte_drums.cpp"
+  },
+  {
+    "directory": "/home/dimas/Documentos/Uni/3B/PAV/P5/build/release",
+    "command": "c++ -Isrc/25a6634@@synth@exe -Isrc -I../../src -I../../src/include -I../../src/synth -I../../src/instruments -I../../src/pav/docopt_cpp -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wnon-virtual-dtor -std=c++11 -O3 -MD -MQ 'src/25a6634@@synth@exe/instruments_sinte_clarinete.cpp.o' -MF 'src/25a6634@@synth@exe/instruments_sinte_clarinete.cpp.o.d' -o 'src/25a6634@@synth@exe/instruments_sinte_clarinete.cpp.o' -c ../../src/instruments/sinte_clarinete.cpp",
+    "file": "../../src/instruments/sinte_clarinete.cpp"
+  },
+  {
+    "directory": "/home/dimas/Documentos/Uni/3B/PAV/P5/build/release",
+    "command": "c++ -Isrc/25a6634@@synth@exe -Isrc -I../../src -I../../src/include -I../../src/synth -I../../src/instruments -I../../src/pav/docopt_cpp -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wnon-virtual-dtor -std=c++11 -O3 -MD -MQ 'src/25a6634@@synth@exe/instruments_sintesisfm.cpp.o' -MF 'src/25a6634@@synth@exe/instruments_sintesisfm.cpp.o.d' -o 'src/25a6634@@synth@exe/instruments_sintesisfm.cpp.o' -c ../../src/instruments/sintesisfm.cpp",
+    "file": "../../src/instruments/sintesisfm.cpp"
+  },
+  {
+    "directory": "/home/dimas/Documentos/Uni/3B/PAV/P5/build/release",
     "command": "c++ -Isrc/25a6634@@synth@exe -Isrc -I../../src -I../../src/include -I../../src/synth -I../../src/instruments -I../../src/pav/docopt_cpp -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wnon-virtual-dtor -std=c++11 -O3 -MD -MQ 'src/25a6634@@synth@exe/synth_envelope_adsr.cpp.o' -MF 'src/25a6634@@synth@exe/synth_envelope_adsr.cpp.o.d' -o 'src/25a6634@@synth@exe/synth_envelope_adsr.cpp.o' -c ../../src/synth/envelope_adsr.cpp",
     "file": "../../src/synth/envelope_adsr.cpp"
   },

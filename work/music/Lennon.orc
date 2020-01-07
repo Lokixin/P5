@@ -1,0 +1,10 @@
+2	Sinte_Drums ADSR_A=0.01; ADSR_D=0.1; ADSR_S=0.00; ADSR_R=0.01; N=40 ;
+3	Sinte_Drums ADSR_A=0.01; ADSR_D=0.1; ADSR_S=0.00; ADSR_R=0.01; N=40 ;
+4	Instrument_Guitar ADSR_A=0.05; ADSR_D=0.6; ADSR_S=0.1; ADSR_R=0.4; N=50;
+5	Sinte_Basoon ADSR_A=0.1; ADSR_D=0.0; ADSR_S=0.3; ADSR_R=0.05; N=40;
+6	Sinte_Metal ADSR_A=0.1; ADSR_D=0.1; ADSR_S=0.3; ADSR_R=0.1; N=40;
+7	Instrument_Guitar ADSR_A=0.1; ADSR_D=0.1; ADSR_S=0.5; ADSR_R=0.3; N=60;
+8	Sinte_Metal ADSR_A=0.1; ADSR_D=0.1; ADSR_S=0.3; ADSR_R=0.1; N=40;
+9	Instrument_Guitar ADSR_A=0.1; ADSR_D=0.3; ADSR_S=0.6; ADSR_R=0.2; N=50;
+10	Sinte_Clarinete ADSR_A=0.1; ADSR_D=0.0; ADSR_S=0.3; ADSR_R=0.05; N=40;
+11	Sinte_Campana ADSR_A=0.01; ADSR_D=0.3; ADSR_S=0.3; ADSR_R=0.8; N=40 ;

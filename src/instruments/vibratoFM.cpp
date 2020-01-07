@@ -24,8 +24,8 @@ VibratoFM::VibratoFM(const std::string &param)
     N = 40; //default value
 
     N1 = 1;
-    N2 = 7;
-    I = 0.328;
+    N2 =8;
+    I = 0.5;
 
   //Create a tbl with one period of a sinusoidal wave
   tbl.resize(N);
@@ -46,13 +46,15 @@ void VibratoFM::command(long cmd, long note, long vel) {
 	  A = vel / 127.;
 
     float F0 = (440.00*pow(2,((float)note-69.00)/12.00))/SamplingRate;
+    N1 = 1;
+    N2 = 7;
+    I = 0.00329;
     float FC = N1*F0;
     float FM = N2*F0;
 
-    step = 2*M_PI*FM;
-    mod_c = tbl.size()*FM;
+    step = FC*tbl.size();
     phase_m = 0;
-    alpha_m = 2*M_PI*FC;
+    alpha_m = 2*M_PI*FM;
   }
 
   else if (cmd == 8) {	//'Key' released: sustain ends, release begins
@@ -78,11 +80,12 @@ const vector<float> & VibratoFM::synthesize() {
     if (round(step*index) == tbl.size()){
       index = 0;
     }
-    x[i] = A*tbl[round(step*index)];
-    index += (1 + I*sin(phase_m)/(step));
-    phase_m += alpha_m;
+    x[i] = A*tbl[round(index)];
+    index += step*(1+I*sin(phase_m));
+    phase_m = (phase_m+alpha_m);
+    if(phase_m > 2*M_PI ) phase_m = 0;
   }
-  adsr(x); //apply envelope to x and update internal status of ADSR
 
+  adsr(x); //apply envelope to x and update internal status of ADSR
   return x;
 }
