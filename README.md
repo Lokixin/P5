@@ -27,6 +27,14 @@ visualizar el funcionamiento de la curva ADSR.
 
 * Un instrumento con una envolvente ADSR genérica, para el que se aprecie con claridad cada uno de sus parámetros:
   ataque (A), caída (D), mantenimiento (S) y liberación (R).
+  
+  A continuación podemos ver un instrumento genérico para poder detallar los diferentes parámetros. Primero, se
+  aprecia el Ataque, con una duración aproxiamda de 0.2s, a continuación la caída de 0.2s que llega hasta el nivel de
+  mantenimiento de 0.8 ( normalizado a 1 ) y finalmente la liberación se lleva a cabo a lo largo de 0.15s. Esta 
+  envolvente no pretende emular ningún instrumento, si no mostrar de forma clara las 4 etapas de ADSR: 
+  
+  <img src="img/generico.png" width="320" align="center">
+  
 * Un instrumento *percusivo*, como una guitarra o un piano, en el que el sonido tenga un ataque rápido, no haya
   mantenimiemto y el sonido se apague lentamente.
   - Para un instrumento de este tipo, tenemos dos situaciones posibles:
@@ -34,9 +42,38 @@ visualizar el funcionamiento de la curva ADSR.
     * El intérprete da por finalizada la nota antes de su completa extinción, iniciándose una disminución rápida del
       sonido hasta su finalización.
   - Debera representar en esta memoria **ambos** posibles finales de la nota.
+  
+  Para la primera opción del instrumento percusivo, el intérprete mantiene la nota hasta su extinción, conseguimos
+  la siguiente forma de onda: 
+  
+  <img src="img/guitarrasin.png" width="320" align="center">
+  
+  En ella podemos ver que el ataque es prácticamente instantáneo ( no está etiquetado, pues dura 1ms ). En cambio, 
+  el tiempo de caída es más largo, unos 0.5s y finalmente el tiempo de liberación que se puede apreciar por un leve
+  cambio de pendiente que dura 0.15s. 
+  
+  Para la segunda opción, dónde sí se suelta la nota antes de su extinción, hemos modificado el fichero 
+  doremi.scr para añadir el comando NoteOff 60 ticks después del primer Do. Para ello hemos escrito el comando: 
+  
+  > 60		8	1	60	100
+  
+  Con dicho comando obtenemos la siguiente forma de onda: 
+  
+  <img src="img/guitarrasin.png" width="320" align="center">
+  
+  En la imagen podemos apreciar un ataque muy corto también, una caída más larga pero no tanto como la anterior (unos 
+  0.25s ) y un tiempo de liberación con mayor pendiente de 0.25s también. Esto es debido al comando NoteOff. 
+  
+  
 * Un instrumento *plano*, como los de cuerdas frotadas (violines y semejantes) o algunos de viento. En ellos, el
   ataque es relativamente rápido hasta alcanzar el nivel de mantenimiento (sin sobrecarga), y la liberación también
   es bastante rápida.
+  
+  El útltimo instrumento de cuerda frotada, consiste en un ataque de 0.1s, bastante rápido, el cuál no llega a la
+  máxima potencia si no directamente al nivel de mantenimiento. Después de 0.4s, se inicia directamente una fase
+  de liberación también rápida de 0.1s. 
+  
+  <img src="img/plano.png" width="320" align="center">
 
 Para los cuatro casos, deberá incluir una gráfica en la que se visualice claramente la curva ADSR. Deberá añadir la
 información necesaria para su correcta interpretación, aunque esa información puede reducirse a colocar etiquetas y
