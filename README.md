@@ -33,7 +33,7 @@ visualizar el funcionamiento de la curva ADSR.
   mantenimiento de 0.8 ( normalizado a 1 ) y finalmente la liberación se lleva a cabo a lo largo de 0.15s. Esta 
   envolvente no pretende emular ningún instrumento, si no mostrar de forma clara las 4 etapas de ADSR: 
   
-  <img src="img/generico.png" width="320" align="center">
+  <img src="img/generico.png" width="500" align="center">
   
 * Un instrumento *percusivo*, como una guitarra o un piano, en el que el sonido tenga un ataque rápido, no haya
   mantenimiemto y el sonido se apague lentamente.
@@ -46,7 +46,7 @@ visualizar el funcionamiento de la curva ADSR.
   Para la primera opción del instrumento percusivo, el intérprete mantiene la nota hasta su extinción, conseguimos
   la siguiente forma de onda: 
   
-  <img src="img/guitarrasin.png" width="320" align="center">
+  <img src="img/guitarsin.png" width="500" align="center">
   
   En ella podemos ver que el ataque es prácticamente instantáneo ( no está etiquetado, pues dura 1ms ). En cambio, 
   el tiempo de caída es más largo, unos 0.5s y finalmente el tiempo de liberación que se puede apreciar por un leve
@@ -59,7 +59,7 @@ visualizar el funcionamiento de la curva ADSR.
   
   Con dicho comando obtenemos la siguiente forma de onda: 
   
-  <img src="img/guitarrasin.png" width="320" align="center">
+  <img src="img/guitarcon.png" width="500" align="center">
   
   En la imagen podemos apreciar un ataque muy corto también, una caída más larga pero no tanto como la anterior (unos 
   0.25s ) y un tiempo de liberación con mayor pendiente de 0.25s también. Esto es debido al comando NoteOff. 
@@ -73,7 +73,7 @@ visualizar el funcionamiento de la curva ADSR.
   máxima potencia si no directamente al nivel de mantenimiento. Después de 0.4s, se inicia directamente una fase
   de liberación también rápida de 0.1s. 
   
-  <img src="img/plano.png" width="320" align="center">
+  <img src="img/plano.png" width="500" align="center">
 
 Para los cuatro casos, deberá incluir una gráfica en la que se visualice claramente la curva ADSR. Deberá añadir la
 información necesaria para su correcta interpretación, aunque esa información puede reducirse a colocar etiquetas y
