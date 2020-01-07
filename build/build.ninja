@@ -63,6 +63,10 @@ build meson-out/25a6634@@synth@exe/instruments_seno.cpp.o: cpp_COMPILER ../src/i
  DEPFILE = meson-out/25a6634@@synth@exe/instruments_seno.cpp.o.d
  ARGS = -Imeson-out/25a6634@@synth@exe -Isrc -I../src -I../src/include -I../src/synth -I../src/instruments -I../src/pav/docopt_cpp -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wnon-virtual-dtor -std=c++11 -g
 
+build meson-out/25a6634@@synth@exe/instruments_guitar.cpp.o: cpp_COMPILER ../src/instruments/guitar.cpp
+ DEPFILE = meson-out/25a6634@@synth@exe/instruments_guitar.cpp.o.d
+ ARGS = -Imeson-out/25a6634@@synth@exe -Isrc -I../src -I../src/include -I../src/synth -I../src/instruments -I../src/pav/docopt_cpp -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wnon-virtual-dtor -std=c++11 -g
+
 build meson-out/25a6634@@synth@exe/instruments_instrument_dumb.cpp.o: cpp_COMPILER ../src/instruments/instrument_dumb.cpp
  DEPFILE = meson-out/25a6634@@synth@exe/instruments_instrument_dumb.cpp.o.d
  ARGS = -Imeson-out/25a6634@@synth@exe -Isrc -I../src -I../src/include -I../src/synth -I../src/instruments -I../src/pav/docopt_cpp -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wnon-virtual-dtor -std=c++11 -g
@@ -99,7 +103,7 @@ build meson-out/25a6634@@synth@exe/effects_vibrato.cpp.o: cpp_COMPILER ../src/ef
  DEPFILE = meson-out/25a6634@@synth@exe/effects_vibrato.cpp.o.d
  ARGS = -Imeson-out/25a6634@@synth@exe -Isrc -I../src -I../src/include -I../src/synth -I../src/instruments -I../src/pav/docopt_cpp -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wnon-virtual-dtor -std=c++11 -g
 
-build meson-out/synth: cpp_LINKER meson-out/25a6634@@synth@exe/instruments_instrument.cpp.o meson-out/25a6634@@synth@exe/instruments_seno.cpp.o meson-out/25a6634@@synth@exe/instruments_instrument_dumb.cpp.o meson-out/25a6634@@synth@exe/synth_envelope_adsr.cpp.o meson-out/25a6634@@synth@exe/synth_midi_score.cpp.o meson-out/25a6634@@synth@exe/synth_multinote_instr.cpp.o meson-out/25a6634@@synth@exe/synth_orchest.cpp.o meson-out/25a6634@@synth@exe/synth_synthesizer.cpp.o meson-out/25a6634@@synth@exe/effects_effect.cpp.o meson-out/25a6634@@synth@exe/effects_tremolo.cpp.o meson-out/25a6634@@synth@exe/effects_vibrato.cpp.o | /usr/lib/x86_64-linux-gnu/libm.a /usr/lib/x86_64-linux-gnu/libm.so /usr/lib/x86_64-linux-gnu/libsndfile.a /usr/lib/x86_64-linux-gnu/libsndfile.so.1.0.28 meson-out/libpav.a
+build meson-out/synth: cpp_LINKER meson-out/25a6634@@synth@exe/instruments_instrument.cpp.o meson-out/25a6634@@synth@exe/instruments_seno.cpp.o meson-out/25a6634@@synth@exe/instruments_guitar.cpp.o meson-out/25a6634@@synth@exe/instruments_instrument_dumb.cpp.o meson-out/25a6634@@synth@exe/synth_envelope_adsr.cpp.o meson-out/25a6634@@synth@exe/synth_midi_score.cpp.o meson-out/25a6634@@synth@exe/synth_multinote_instr.cpp.o meson-out/25a6634@@synth@exe/synth_orchest.cpp.o meson-out/25a6634@@synth@exe/synth_synthesizer.cpp.o meson-out/25a6634@@synth@exe/effects_effect.cpp.o meson-out/25a6634@@synth@exe/effects_tremolo.cpp.o meson-out/25a6634@@synth@exe/effects_vibrato.cpp.o | /usr/lib/x86_64-linux-gnu/libm.a /usr/lib/x86_64-linux-gnu/libm.so /usr/lib/x86_64-linux-gnu/libsndfile.a /usr/lib/x86_64-linux-gnu/libsndfile.so.1.0.28 meson-out/libpav.a
  LINK_ARGS = -Wl,--as-needed -Wl,--no-undefined -Wl,--start-group meson-out/libpav.a -lm -lsndfile -Wl,--end-group '-Wl,-rpath,$$ORIGIN/' -Wl,-rpath-link,/home/dimas/Documentos/Uni/3B/PAV/P5/build/meson-out
 
 build meson-out/e3a398d@@midi2skini@exe/src_midi2skini.cpp.o: cpp_COMPILER ../src/midi2scores/src/midi2skini.cpp

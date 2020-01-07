@@ -1,6 +1,9 @@
 #include <iostream>
 #include "instrument_dumb.h"
 #include "seno.h"
+#include "guitar.h"
+#include "generico.h"
+#include "plano.h"
 
 /*
   For each new instrument:
@@ -14,11 +17,17 @@ using namespace std;
 namespace upc {
   Instrument * get_instrument(const string &name, const string &parameters) {
     Instrument * pInst = 0;
-    //    cout << name << ": " << parameters << endl;
+
     if (name == "InstrumentDumb") {
       pInst = (Instrument *) new InstrumentDumb(parameters);
     }else if (name == "Seno"){
       pInst = (Instrument *) new Seno(parameters);
+    }else if (name == "Guitar"){
+      pInst = (Instrument *) new Guitar(parameters);
+    }else if (name == "Generico"){
+      pInst = (Instrument *) new Generico(parameters);
+    }else if (name == "Plano"){
+      pInst = (Instrument *) new Plano(parameters);
     }
     
     return pInst;

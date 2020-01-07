@@ -2,6 +2,7 @@
 prefix = /home/dimas/PAV
 libdir = lib
 buildtype = debug
+backend = ninja
 
 [properties]
 

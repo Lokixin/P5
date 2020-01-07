@@ -20,3 +20,8 @@
 2	963	1575917681	src/25a6634@@synth@exe/effects_vibrato.cpp.o	fc95570b971eaeb3
 3	1018	1575917681	src/midi2scores/e3a398d@@midi2skini@exe/src_MidiFile.cpp.o	5ed11fb53708f29f
 1018	1120	1575917681	src/midi2scores/midi2skini	150f25f55316a46c
+0	303	1578249658	build.ninja	4bc9a0050ef7fcc4
+2	3	1575913462	src/midi2scores/midi2sco	878a84c638f8f5a6
+2	391	1578249658	src/25a6634@@synth@exe/instruments_instrument.cpp.o	e625abe1b45d31fd
+1	425	1578249658	src/25a6634@@synth@exe/synth_envelope_adsr.cpp.o	5a60308c4193e274
+2	531	1578249658	src/25a6634@@synth@exe/instruments_seno.cpp.o	6a155c7df4675c5b

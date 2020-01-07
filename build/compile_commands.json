@@ -26,6 +26,11 @@
   },
   {
     "directory": "/home/dimas/Documentos/Uni/3B/PAV/P5/build",
+    "command": "c++ -Imeson-out/25a6634@@synth@exe -Isrc -I../src -I../src/include -I../src/synth -I../src/instruments -I../src/pav/docopt_cpp -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wnon-virtual-dtor -std=c++11 -g -MD -MQ 'meson-out/25a6634@@synth@exe/instruments_guitar.cpp.o' -MF 'meson-out/25a6634@@synth@exe/instruments_guitar.cpp.o.d' -o 'meson-out/25a6634@@synth@exe/instruments_guitar.cpp.o' -c ../src/instruments/guitar.cpp",
+    "file": "../src/instruments/guitar.cpp"
+  },
+  {
+    "directory": "/home/dimas/Documentos/Uni/3B/PAV/P5/build",
     "command": "c++ -Imeson-out/25a6634@@synth@exe -Isrc -I../src -I../src/include -I../src/synth -I../src/instruments -I../src/pav/docopt_cpp -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wnon-virtual-dtor -std=c++11 -g -MD -MQ 'meson-out/25a6634@@synth@exe/instruments_instrument_dumb.cpp.o' -MF 'meson-out/25a6634@@synth@exe/instruments_instrument_dumb.cpp.o.d' -o 'meson-out/25a6634@@synth@exe/instruments_instrument_dumb.cpp.o' -c ../src/instruments/instrument_dumb.cpp",
     "file": "../src/instruments/instrument_dumb.cpp"
   },

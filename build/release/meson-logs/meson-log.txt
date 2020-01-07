@@ -1,4 +1,4 @@
-Build started at 2019-12-09T20:01:46.107267
+Build started at 2020-01-07T12:53:17.369816
 Main binary: /usr/bin/python3
 Build Options: -Dprefix=/home/dimas/PAV -Dlibdir=lib -Dbuildtype=release -Dbackend=ninja
 Python system: Linux
@@ -24,8 +24,8 @@ Configuring Doxyfile using configuration
 Build targets in project: 5
 Found ninja-1.8.2 at /usr/bin/ninja
 Running compile:
-Working directory:  /tmp/tmplv04kebe
-Command line:  c++ /tmp/tmplv04kebe/testfile.cpp -o /tmp/tmplv04kebe/output.obj -pipe -D_FILE_OFFSET_BITS=64 -c -std=c++11 
+Working directory:  /tmp/tmpk917j5wy
+Command line:  c++ /tmp/tmpk917j5wy/testfile.cpp -o /tmp/tmpk917j5wy/output.obj -pipe -D_FILE_OFFSET_BITS=64 -c -std=c++11 
 
 Code:
  int i = static_cast<int>(0);
@@ -35,8 +35,8 @@ Compiler stderr:
  
 Compiler accepts -std=c++11: YES
 Running compile:
-Working directory:  /home/dimas/Documentos/Uni/3B/PAV/P5/build/release/meson-private/tmp09klkqs0
-Command line:  c++ /home/dimas/Documentos/Uni/3B/PAV/P5/build/release/meson-private/tmp09klkqs0/testfile.cpp -o /home/dimas/Documentos/Uni/3B/PAV/P5/build/release/meson-private/tmp09klkqs0/output.obj -pipe -c -D_FILE_OFFSET_BITS=64 -O0 -fpermissive --print-search-dirs 
+Working directory:  /home/dimas/Documentos/Uni/3B/PAV/P5/build/release/meson-private/tmpv4w04na9
+Command line:  c++ /home/dimas/Documentos/Uni/3B/PAV/P5/build/release/meson-private/tmpv4w04na9/testfile.cpp -o /home/dimas/Documentos/Uni/3B/PAV/P5/build/release/meson-private/tmpv4w04na9/output.obj -pipe -c -D_FILE_OFFSET_BITS=64 -O0 -fpermissive --print-search-dirs 
 
 Code:
  

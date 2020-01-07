@@ -1,13 +1,13 @@
 #include <iostream>
 #include <math.h>
 #include "keyvalue.h"
-#include "seno.h"
+#include "generico.h"
 #include <stdlib.h>
 
 using namespace upc;
 using namespace std;
 
-Seno::Seno(const std::string &param): adsr(SamplingRate, param) {
+Generico::Generico(const std::string &param): adsr(SamplingRate, param) {
   bActive = false;
   x.resize(BSIZE);
 
@@ -29,12 +29,11 @@ Seno::Seno(const std::string &param): adsr(SamplingRate, param) {
   for (int i=0; i < N ; ++i) {
     tbl[i] = sin(phase);
     phase += step;
-    cout << tbl[i] << endl;
   }
 }
 
 
-void Seno::command(long cmd, long note, long vel) {
+void Generico::command(long cmd, long note, long vel) {
   if (cmd == 9) {		//'Key' pressed: attack begins
     bActive = true;
     adsr.start();
@@ -53,7 +52,7 @@ void Seno::command(long cmd, long note, long vel) {
 }
 
 
-const vector<float> & Seno::synthesize() {
+const vector<float> & Generico::synthesize() {
   if (not adsr.active()) {
     x.assign(x.size(), 0);
     bActive = false;
