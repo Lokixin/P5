@@ -188,11 +188,27 @@ en semitonos.
 
 - Use el instrumento para generar un vibrato de *parámetros razonables* e incluya una gráfica en la que se vea,
   claramente, la correspondencia entre los valores `N1`, `N2` e `I` con la señal obtenida.
+  
+  No hemos podido idear una forma de mostrar mediante una gráfica N1, N e I. Pero aquí está el resultado usando
+  N1 = 1, N2 = 8 e I = 0.5. 
+  
+  <img src="img/vibratoFm.png" width="640" align="center">
+  
+  
 - Use el instrumento para generar un sonido tipo clarinete y otro tipo campana. Tome los parámetros del sonido (N1,
   N2 e I) y de la envolvente ADSR del citado artículo. Con estos sonidos, genere sendas escalas diatónicas (fichero
   `doremi.sco`) y ponga el resultado en los ficheros `work/doremi/clarinete.wav` y `work/doremi/campana.work`.
   * También puede colgar en el directorio work/doremi otras escalas usando sonidos *interesantes*. Por ejemplo,
     violines, pianos, percusiones, espadas láser de la [Guerra de las Galaxias](https://www.starwars.com/), etc.
+    
+  Se han sintetizado los instrumentos: 
+  - Obligatorios: 
+  	- Clarinete
+	- Campana
+  - Opcionales: 
+  	- Drum & Drum Grave
+	- Basson
+	- Metal & Metal Grave
 
 ### Orquestación usando el programa synth.
 
@@ -213,4 +229,16 @@ o composición. Se valorará la riqueza instrumental, su modelado y el resultado
   `work/music`.
 - Indique, a continuación, la orden necesaria para generar cada una de las señales usando los distintos ficheros.
 
+Se han orquestado las canciones: **"You've got a friend in me"** y **"The Christmas Song"**. Los comandos utilizados
+para generar los ficheros han sido: 
+
+> synth Lennon.orc The_Christmas_Song_Lennon.sco Lennon_withfx.wav -e effects.orc
+
+> synth ToyStory.orc ToyStory_A_Friend_in_me.sco ToyStory1_withfx.wav -e effects.orc
+
+> synth Lennon.orc The_Christmas_Song_Lennon.sco Lennon.wav
+
+> synth ToyStory.orc ToyStory_A_Friend_in_me.sco ToyStory1.wav
+
+Los resultados se pueden ver en el directorio indicado en el enunciado. 
 
