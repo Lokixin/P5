@@ -4,6 +4,7 @@
 #include "guitar.h"
 #include "generico.h"
 #include "plano.h"
+#include "vibratoFM.h"
 
 /*
   For each new instrument:
@@ -28,6 +29,8 @@ namespace upc {
       pInst = (Instrument *) new Generico(parameters);
     }else if (name == "Plano"){
       pInst = (Instrument *) new Plano(parameters);
+    }else if (name == "VibratoFM"){
+      pInst = (Instrument *) new VibratoFM(parameters);
     }
     
     return pInst;
